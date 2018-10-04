@@ -1,0 +1,21 @@
+kayttaja->selain:
+note left of selain
+kayttaja täyttää formin ja painaa talleta
+end note
+
+selain->palvelin: POST https://fullstack-exampleapp.herokuapp.com/new_note
+palvelin->selain: status 200, POST onnistui
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/notes
+palvelin->selain: status 200, sivun HTML-koodi
+
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: status 200, sivun css tyylit
+
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/main.js
+palvelin->selain: status 200, sivun javascript
+
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin->selain: status 200, sivun tietokanta json muodossa
+
+note left of selain
+selain lataa sivun uudelleen ja näyttää uutena lisätyn muistiinpanon

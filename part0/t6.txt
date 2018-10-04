@@ -1,0 +1,11 @@
+kayttaja->selain:
+note left of selain
+kayttaja täyttää formin ja painaa talleta
+end note
+
+selain->palvelin: POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+palvelin->selain: status 201, uusi muistiinpano tallennettu
+
+note left of selain
+ei tapahdu sivun uudelleenlatausta
+end note
